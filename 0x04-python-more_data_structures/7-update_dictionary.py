@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-def update_dictionary(my_dict, key, value):
-    if isinstance(key, str):
-        my_dict[key] = value
-    return 
+def update_dictionary(a_dictionary, key, value):
+    a_dictionary[key] = value
+    return a_dictionary
+
