@@ -1,0 +1,23 @@
+The ``100-matrix_mul(m_a, m_b)`` module
+======================
+
+Using ``multiply 2 matrices``
+-------------------
+
+    >>> matrix_mul = __import__('100-matrix_mul').matrix_mul
+
+Test: Working scenarios
+    >>> print(matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    [[ 7 10]
+     [15 22]]
+
+    >>> print(matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+    [[13 16]]
+
+Test: empty matrix
+    >>> print(matrix_mul([], [1, 2, 3]))
+    Traceback (most recent call last):
+    ValueError: shapes (0,) and (3,) not aligned: 0 (dim 0) != 3 (dim 0)
+
+Test: mismatched matrix size
+    >>> print(matrix_mul([[1, 2], [1, 2]], [1, 2, 3]))

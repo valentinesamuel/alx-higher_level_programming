@@ -1,0 +1,33 @@
+The ``101-lazy_matrix_mul(m_a, m_b)`` module
+======================
+
+Using ``matrix_mul``
+-------------------
+
+Checking for import numpy:
+>>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+Checking for working scenarios:
+    >>> print(lazy_matrix_mul([[1, 2], [3, 4]], [[1, 2], [3, 4]]))
+    [[ 7 10]
+     [15 22]]
+    >>> print(lazy_matrix_mul([[1, 2]], [[3, 4], [5, 6]]))
+    [[13 16]]
+
+Checking for passing empty m_a:
+    >>> lazy_matrix_mul([], [[1, 2], [3, 4]])
+    Traceback (most recent call last):
+    ...
+    ValueError: shapes (0,) and (2,2) not aligned: 0 (dim 0) != 2 (dim 0)
+
+Checking empty matrix:
+    >>> print(lazy_matrix_mul([], [1, 2, 3]))
+    Traceback (most recent call last):
+    ...
+    ValueError: shapes (0,) and (3,) not aligned: 0 (dim 0) != 3 (dim 0)
+
+Checking mismatched matrix size:
+    >>> print(lazy_matrix_mul([[1, 2], [1, 2]], [1, 2, 3]))
+    Traceback (most recent call last):
+    ...
+    ValueError: shapes (2,2) and (3,) not aligned: 2 (dim 1) != 3 (dim 0)
